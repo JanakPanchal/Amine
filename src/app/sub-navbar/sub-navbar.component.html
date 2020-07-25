@@ -1,0 +1,7 @@
+<mat-toolbar color="primary">
+  
+    <span *ngFor="let url of listofsuburl">
+        <a mat-button routerLink="{{ url.name }}" >{{ url.name }}</a>
+    </span>
+  </mat-toolbar>
+  <h2>sub</h2>

@@ -1,0 +1,242 @@
+/* .animation-name{
+    display: inline-block;
+    position: relative;
+    background: 0 0;
+    margin: 0;
+    padding: 0;
+    z-index: 9;
+    white-space: normal;
+    width: 118px;
+    height: 134px;
+}
+.middle{
+        -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+}
+.anim-groups-list {
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    height: 100%;
+}
+.animation-name span{
+
+    position: absolute;
+    z-index: 10;
+    background-color: #3e3e3e;
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin-left: -54px;
+    margin-top: -54px;
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-decoration: none;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+
+}
+.animation-name span a span .name{
+    z-index: 8;
+    font-size: 12px;
+    line-height: 1;
+    font-family: 'TeXGyreAdventorBold';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    opacity: 1;
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+} */
+
+.horizontal-scrollable  .anim-groups-list .animation-name { 
+    overflow-x: auto; 
+    white-space: nowrap; 
+} 
+.output{
+    margin: 20px;
+    background-color: #ccc
+    ;
+}
+.anim-presentation {
+    position: absolute;
+    top: 182px;
+    left: 0;
+    right: 0;
+    bottom: 45px;
+    overflow: hidden;
+    height: auto;
+}
+#box-object {
+    background-color: #3e3e3e;
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    
+}
+#box-object-light {
+    background-color: #fff;
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+}
+#circle-object {
+    background: #3e3e3e;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#box-object-2 .text {
+    color: #fff;
+    font: 16px 'TeXGyreAdventorBold';
+    line-height: 70px;
+    text-align: center;
+    letter-spacing: .16em;
+    position: absolute;
+    width: 100%;
+    text-transform: uppercase;
+}
+#text-object {
+    color: #3e3e3e;
+    text-align: center;
+    font: 60px/1 'TeXGyreAdventorBold';
+    text-transform: none;
+}
+#letter-object {
+    color: #fff;
+    font: 200px/1 'TeXGyreAdventorBold';
+    text-transform: none;
+    text-align: center;
+}
+
+.anim-object {
+    display: block;
+    z-index: 905;
+    display: block;
+    margin: 0 auto;
+}
+.left{
+  float: left;
+  margin-left: 20px;
+}
+.right{
+    display: block;
+    
+}
+
+.anim-presentation .left #anim-options-form {
+    position: relative;
+    margin-bottom: 1px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+    z-index: 1000;
+    padding: 20px;
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);
+}
+
+#anim-options-form fieldset select {
+    display: inline-block;
+    width: 100%;
+    height: 29px;
+    padding: 0 10px;
+    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 29px;
+    font-weight: 400;
+    font-family: 'TeXGyreAdventorBold';
+    color: #585858;
+    vertical-align: middle;
+    background: #ebebeb  no-repeat;
+    background-position: calc(100% - 8px) 7px;
+    background-size: 17px;
+    -webkit-appearance: none!important;
+    -moz-appearance: none!important;
+    appearance: none!important;
+    outline: 0!important;
+    -webkit-box-sizing: border-box!important;
+    box-sizing: border-box!important;
+    border: 0;
+    z-index: 1000;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+#anim-options-form fieldset .form-control input.input-small {
+    width: 62%;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+}
+#anim-options-form fieldset .form-control {
+    padding: 3px 0 5px;
+}
+#anim-options-form fieldset .form-control select.time-unit-select {
+    width: calc(38% - 1px);
+    margin-left: 1px;
+    font-weight: 400;
+}
+#anim-options-form fieldset label {
+    font: 12px/1.2 'HelveticaNeue-Light','HelveticaNeue',Helvetica,'Roboto-Thin',Arial,sans-serif-light;
+    color: #7e7e7e;
+    display: block;
+    margin: 0 0 2px;
+    letter-spacing: .04em;
+}
+#anim-options-form fieldset .form-control {
+    padding: 3px 0 5px;
+}
+.form-control {
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+}
+
+
+
+@-webkit-keyframes scale-up-top {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+    }
+  }
+  @keyframes scale-up-top {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+    }
+  }

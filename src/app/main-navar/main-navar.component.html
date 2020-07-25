@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+    <span>Amine</span>
+
+    <span (click)="onSelect(url)"  *ngFor="let url of listofurl">
+        <a mat-button  >{{ url.name }}</a>
+    </span>
+  </mat-toolbar>
+  <section class="middle horizontal-scrollable">
+    <div class="anim-groups-list ">
+        <mat-toolbar color="primary" class="animation-name">
+            <span  (click)="onSelectSubAnmiation(url)" *ngFor="let url of listofsuburl">
+                <a mat-button routerLink="{{ url.name }}" >
+                    <span class="name">{{ url.name }}</span></a>
+            </span>
+          </mat-toolbar>
+    
+      </div>
+
+  </section>
+
+  <section class="lower horizontal-scrollable">
+    <div class="anim-groups-list ">
+        <mat-toolbar color="primary" class="animation-name">
+            <span *ngFor="let url of listofsubamination">
+                <a mat-button routerLink="{{ url.name }}" >
+                    <span class="name">{{ url.name }}</span></a>
+            </span>
+          </mat-toolbar>
+    
+      </div>
+  </section>
+  <button mat-icon-button color="primary" (click)="openDialog()">
+    <mat-icon>code</mat-icon>
+  </button>
+
+ 
