@@ -274,13 +274,12 @@ export class AnimationDataService {
 ]
 
 
-listOfSubAniamtion =   [
+listOfSubAniamtion =  [
   {
  "name":"scale-up",
  "data": [
   {
-    "name": "scale-up-center",
-    "value": 'animation: 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 0s 1 normal both running scale-up-top;'
+    "name": "scale-up-center"
   },
   {
     "name": "scale-up-top"
@@ -324,9 +323,61 @@ listOfSubAniamtion =   [
   {
     "name": "scale-up-ver-bottom"
   }
-]  
+  ]  
+  },
+  {
+ "name":"scale-down",
+ "data": [
+  {
+    "name": "scale-up-center"
+  },
+  {
+    "name": "scale-up-top"
+  },
+  {
+    "name": "scale-up-tr"
+  },
+  {
+    "name": "scale-up-right"
+  },
+  {
+    "name": "scale-up-br"
+  },
+  {
+    "name": "scale-up-bottom"
+  },
+  {
+    "name": "scale-up-bl"
+  },
+  {
+    "name": "scale-up-left"
+  },
+  {
+    "name": "scale-up-tl"
+  },
+  {
+    "name": "scale-up-hor-center"
+  },
+  {
+    "name": "scale-up-hor-left"
+  },
+  {
+    "name": "scale-up-hor-right"
+  },
+  {
+    "name": "scale-up-ver-center"
+  },
+  {
+    "name": "scale-up-ver-top"
+  },
+  {
+    "name": "scale-up-ver-bottom"
   }
+  ]  
+  },
 ]
+
+finalCssClass = ""
 
 
 
@@ -348,6 +399,12 @@ listOfSubAniamtion =   [
     return this.finalData
   }
 
+
+  generateCssOutput(data){
+    console.log("Service" , data)
+    this.finalCssClass = "."+data.name+" {animation: "+data.name
+    return this.finalCssClass
+  }
   
 
 }

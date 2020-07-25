@@ -7,7 +7,7 @@
   </mat-toolbar>
   <section class="middle horizontal-scrollable">
     <div class="anim-groups-list ">
-        <mat-toolbar color="primary" class="animation-name">
+        <mat-toolbar color="" class="animation-name" style="height: 150px;">
             <span  (click)="onSelectSubAnmiation(url)" *ngFor="let url of listofsuburl">
                 <a mat-button routerLink="{{ url.name }}" >
                     <span class="name">{{ url.name }}</span></a>
@@ -20,8 +20,8 @@
 
   <section class="lower horizontal-scrollable">
     <div class="anim-groups-list ">
-        <mat-toolbar color="primary" class="animation-name">
-            <span *ngFor="let url of listofsubamination">
+        <mat-toolbar color="primary" class="animation-name" style="height: 80px;">
+            <span (click)="OnSelectAnimationType(url)" *ngFor="let url of listofsubamination">
                 <a mat-button routerLink="{{ url.name }}" >
                     <span class="name">{{ url.name }}</span></a>
             </span>
