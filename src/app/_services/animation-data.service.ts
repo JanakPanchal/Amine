@@ -276,105 +276,141 @@ export class AnimationDataService {
 
 listOfSubAniamtion =  [
   {
- "name":"scale-up",
- "data": [
-  {
-    "name": "scale-up-center"
+    "name": "scale-up",
+    "data": [
+      {
+        "name": "scale-up-center",
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+      },
+      {
+        "name": "scale-up-top",
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+      },
+      {
+        "name": "scale-up-tr",
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+      },
+      {
+        "name": "scale-up-right",
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+      },
+      {
+        "name": "scale-up-br",
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+      },
+      {
+        "name": "scale-up-bottom",
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+      },
+      {
+        "name": "scale-up-bl",
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+      },
+      {
+        "name": "scale-up-left",
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+      },
+      {
+        "name": "scale-up-tl",
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+      },
+      {
+        "name": "scale-up-hor-center",
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+      },
+      {
+        "name": "scale-up-hor-left",
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+      },
+      {
+        "name": "scale-up-hor-right",
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+      },
+      {
+        "name": "scale-up-ver-center",
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+      },
+      {
+        "name": "scale-up-ver-top",
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+      },
+      {
+        "name": "scale-up-ver-bottom",
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+      }
+    ]
   },
   {
-    "name": "scale-up-top"
+    "name": "scale-down",
+    "data": [
+      {
+        "name": "scale-up-center"
+      },
+      {
+        "name": "scale-up-top"
+      },
+      {
+        "name": "scale-up-tr"
+      },
+      {
+        "name": "scale-up-right"
+      },
+      {
+        "name": "scale-up-br"
+      },
+      {
+        "name": "scale-up-bottom"
+      },
+      {
+        "name": "scale-up-bl"
+      },
+      {
+        "name": "scale-up-left"
+      },
+      {
+        "name": "scale-up-tl"
+      },
+      {
+        "name": "scale-up-hor-center"
+      },
+      {
+        "name": "scale-up-hor-left"
+      },
+      {
+        "name": "scale-up-hor-right"
+      },
+      {
+        "name": "scale-up-ver-center"
+      },
+      {
+        "name": "scale-up-ver-top"
+      },
+      {
+        "name": "scale-up-ver-bottom"
+      }
+    ]
   },
   {
-    "name": "scale-up-tr"
-  },
-  {
-    "name": "scale-up-right"
-  },
-  {
-    "name": "scale-up-br"
-  },
-  {
-    "name": "scale-up-bottom"
-  },
-  {
-    "name": "scale-up-bl"
-  },
-  {
-    "name": "scale-up-left"
-  },
-  {
-    "name": "scale-up-tl"
-  },
-  {
-    "name": "scale-up-hor-center"
-  },
-  {
-    "name": "scale-up-hor-left"
-  },
-  {
-    "name": "scale-up-hor-right"
-  },
-  {
-    "name": "scale-up-ver-center"
-  },
-  {
-    "name": "scale-up-ver-top"
-  },
-  {
-    "name": "scale-up-ver-bottom"
+    "name": "flip-scale-2",
+    "data": [
+      {
+        "name": "flip-scale-2-hor-top",
+        "value": "linear both;"
+      },
+      {
+        "name": "flip-scale-2-ver-right ",
+        "value": "linear both;"
+      },
+      {
+        "name": "flip-scale-2-hor-bottom",
+        "value": "linear both;"
+      },
+      {
+        "name": "flip-scale-2-ver-left",
+        "value": "linear both;"
+      }
+    ]
   }
-  ]  
-  },
-  {
- "name":"scale-down",
- "data": [
-  {
-    "name": "scale-up-center"
-  },
-  {
-    "name": "scale-up-top"
-  },
-  {
-    "name": "scale-up-tr"
-  },
-  {
-    "name": "scale-up-right"
-  },
-  {
-    "name": "scale-up-br"
-  },
-  {
-    "name": "scale-up-bottom"
-  },
-  {
-    "name": "scale-up-bl"
-  },
-  {
-    "name": "scale-up-left"
-  },
-  {
-    "name": "scale-up-tl"
-  },
-  {
-    "name": "scale-up-hor-center"
-  },
-  {
-    "name": "scale-up-hor-left"
-  },
-  {
-    "name": "scale-up-hor-right"
-  },
-  {
-    "name": "scale-up-ver-center"
-  },
-  {
-    "name": "scale-up-ver-top"
-  },
-  {
-    "name": "scale-up-ver-bottom"
-  }
-  ]  
-  },
 ]
 
 finalCssClass = ""
@@ -402,7 +438,7 @@ finalCssClass = ""
 
   generateCssOutput(data){
     console.log("Service" , data)
-    this.finalCssClass = "."+data.name+" {animation: "+data.name
+    this.finalCssClass = "."+data.name+" {animation: "+data.name+" 0.4s "+ data.value
     return this.finalCssClass
   }
   
