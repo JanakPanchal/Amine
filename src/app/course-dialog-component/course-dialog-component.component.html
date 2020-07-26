@@ -1,18 +1,16 @@
-<h1 mat-dialog-title>You are from {{data.name}}</h1>
-
 <div mat-dialog-content>
     <mat-form-field style="width: 1000px;">
         <textarea matInput 
-             rows="3" cols="60"  value="{{data.classData}}">
+             rows="3" cols="60"  value="{{data.classData}}" [readonly]="true">
         </textarea>
       </mat-form-field> 
     <button mat-raised-button color="accent">Copy Css Class</button>
     <mat-form-field style="width: 1000px;">
     <textarea matInput 
-         rows="8" cols="60" value="{{data.keyFramesdata}}" >
+         rows="8" cols="60" value="{{data.keyFramesdata}}"  #userinput  [readonly]="true">
     </textarea>
     </mat-form-field> 
-    <button mat-raised-button color="accent">Copy KeyFrames</button>
+    <button mat-raised-button color="accent" (click)="copyInputMessage(userinput)" >Copy KeyFrames</button>
 
 
 </div>

@@ -19,6 +19,8 @@ export class MainNavarComponent implements OnInit {
   dialogConfig = new MatDialogConfig();
   onInit = {id: 1, name: "Basic", pageurl: "Basic" }
   OnInitSubAmination = {name:"scale-up"}
+  ObjectShape = "box-object"
+  ObjectAnimation = 1
   ngOnInit(): void {
     this.onSelect(this.onInit)
     this.onSelectSubAnmiation(this.OnInitSubAmination)
@@ -44,6 +46,7 @@ export class MainNavarComponent implements OnInit {
    listofsubamination:any
    divMessages =''
    html_data 
+   currentStyle
    
   onSelect(sublink){
     this.listofsuburl = this.animation.getListOfAnmimation(sublink.name);
@@ -56,12 +59,16 @@ export class MainNavarComponent implements OnInit {
   OnSelectAnimationType(name){
     this.dialogConfig.data = {
       name: "Output",
-      animal: 'Angular For Beginners',
-      classData: this.animation.generateCssOutput(name),
-      keyFramesdata:"@-webkit-keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}"
+      classData: this.animation.generateCssOutput(name).classCss,
+      keyFramesdata: this.animation.generateCssOutput(name).keyFrame,
 
     };
+    this.RefreshObject()
   }
+
+
+
+
 
   
 
@@ -73,6 +80,17 @@ export class MainNavarComponent implements OnInit {
     dialogRef.afterClosed().subscribe(
         data => console.log("Dialog output:", data)
     ); 
+  }
+
+  RefreshObject(){
+
+    var nFilter = document.getElementById('box-object');
+    nFilter.removeAttribute("style");
+    setTimeout(() => {
+      this.currentStyle = this.animation.finalDyamicStyle
+      nFilter.setAttribute("style", this.currentStyle);
+    }, 100);
+   
   }
 
 }

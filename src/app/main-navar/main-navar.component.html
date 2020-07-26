@@ -9,7 +9,7 @@
     <div class="anim-groups-list ">
         <mat-toolbar color="" class="animation-name" style="height: 150px;">
             <span  (click)="onSelectSubAnmiation(url)" *ngFor="let url of listofsuburl">
-                <a mat-button routerLink="{{ url.name }}" >
+                <a mat-button  routerLink="{{ url.name }}" >
                     <span class="name">{{ url.name }}</span></a>
             </span>
           </mat-toolbar>
@@ -21,7 +21,7 @@
   <section class="lower horizontal-scrollable">
     <div class="anim-groups-list ">
         <mat-toolbar color="primary" class="animation-name" style="height: 80px;">
-            <span (click)="OnSelectAnimationType(url)" *ngFor="let url of listofsubamination">
+            <span #subAnimtion (click)="OnSelectAnimationType(url)" *ngFor="let url of listofsubamination">
                 <a mat-button routerLink="{{ url.name }}" >
                     <span class="name">{{ url.name }}</span></a>
             </span>
@@ -29,8 +29,36 @@
     
       </div>
   </section>
-  <button mat-icon-button color="primary" (click)="openDialog()">
-    <mat-icon>code</mat-icon>
-  </button>
+  <main class="output" >
+    <section style="float: right;margin-right: 13%;">
+        <button mat-icon-button color="primary" (click)="openDialog()">
+            <mat-icon>code</mat-icon>
+          </button>
+          <button mat-icon-button color="primary" (click)="RefreshObject()">
+            <mat-icon>refresh</mat-icon>
+          </button>
+      </section>
+    
+      <section >
+          <div class="left" >
+            <div class="example-container">
+                <mat-form-field appearance="fill">
+                  <mat-label>Input</mat-label>
+                  <input matInput    value="{{ ObjectAnimation }}" >
+                </mat-form-field>
+              </div>
+          </div>
+          <div class="right" >
+            <div style="text-align: center; margin: 0 auto">
+                <div class="display-object"  id="{{ ObjectShape }}" ></div>
+            </div>
+          </div>
+          
+      </section>
+  </main>
+
+ 
+
+
 
  

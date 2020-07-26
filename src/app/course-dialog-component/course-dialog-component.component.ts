@@ -14,7 +14,7 @@ export class CourseDialogComponentComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<CourseDialogComponentComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
+    @Inject(MAT_DIALOG_DATA) public data: any ) { }
 
 
   ngOnInit(): void {
@@ -27,9 +27,16 @@ export class CourseDialogComponentComponent implements OnInit {
     });
   }
 
- 
-
   close() {
       this.dialogRef.close();
   }
+
+  copyInputMessage(inputElement) {  
+    inputElement.select();  
+    document.execCommand('copy');  
+    inputElement.setSelectionRange(0, 0);  
+
+      
+  }  
+
 }

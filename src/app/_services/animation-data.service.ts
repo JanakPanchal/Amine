@@ -280,15 +280,18 @@ listOfSubAniamtion =  [
     "data": [
       {
         "name": "scale-up-center",
-        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;",
+        "keyframe": "@keyframes scale-up-center{0%{transform:scale(.5)}100%{transform:scale(1)}}"
       },
       {
         "name": "scale-up-top",
-        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;",
+        "keyframe": "@keyframes scale-up-top{0%{transform:scale(.5);transform-origin:50% 0}100%{transform:scale(1);transform-origin:50% 0}}"
       },
       {
         "name": "scale-up-tr",
-        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;",
+        "keyframe": "@keyframes scale-up-tr{0%{transform:scale(.5);transform-origin:100% 0}100%{transform:scale(1);transform-origin:100% 0}}"
       },
       {
         "name": "scale-up-right",
@@ -414,6 +417,9 @@ listOfSubAniamtion =  [
 ]
 
 finalCssClass = ""
+finalKeyFrame : ""
+finalAminationSec = 1
+finalDyamicStyle
 
 
 
@@ -438,8 +444,10 @@ finalCssClass = ""
 
   generateCssOutput(data){
     console.log("Service" , data)
-    this.finalCssClass = "."+data.name+" {animation: "+data.name+" 0.4s "+ data.value
-    return this.finalCssClass
+    this.finalDyamicStyle = "animation: "+data.name+" "+this.finalAminationSec+"s "+ data.value 
+    this.finalCssClass = "."+data.name+" { animation: "+data.name+" "+this.finalAminationSec+"s "+ data.value + "}"
+    this.finalKeyFrame = data.keyframe
+    return { classCss :  this.finalCssClass , keyFrame : this.finalKeyFrame } 
   }
   
 
