@@ -1,6 +1,7 @@
 import { Component, OnInit , Renderer2, Inject} from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AnimationDataService } from '../_services/animation-data.service'
+import { UserService } from '../_services/user.service'
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import { CourseDialogComponentComponent } from '../course-dialog-component/course-dialog-component.component';
 
@@ -12,7 +13,7 @@ import { CourseDialogComponentComponent } from '../course-dialog-component/cours
 })
 export class MainNavarComponent implements OnInit {
   
-  constructor(private route: Router , public animation:AnimationDataService , private renderer:Renderer2, private dialog: MatDialog) { 
+  constructor(private route: Router , public animation:AnimationDataService , private user:UserService, private renderer:Renderer2, private dialog: MatDialog) { 
 
    
   }
@@ -20,11 +21,12 @@ export class MainNavarComponent implements OnInit {
   onInit = {id: 1, name: "Basic", pageurl: "Basic" }
   OnInitSubAmination = {name:"scale-up"}
   ObjectShape = "box-object"
-  ObjectAnimation = 1
+  ObjectAnimation = 10
   ngOnInit(): void {
+    this.user.userInit()
     this.onSelect(this.onInit)
     this.onSelectSubAnmiation(this.OnInitSubAmination)
-
+    this.user.setUserData(this.onInit)
   }
 
    listofurl = [
@@ -41,7 +43,7 @@ export class MainNavarComponent implements OnInit {
 
 
    listofsuburl:any
-   mainObject = "box-object"
+   mainObject = "box-object-gradient-ver"
    mainStyle = "animation: 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 0s 1 normal both running scale-up-top;"
    listofsubamination:any
    divMessages =''
@@ -67,9 +69,6 @@ export class MainNavarComponent implements OnInit {
   }
 
 
-
-
-
   
 
   openDialog() {
@@ -84,7 +83,7 @@ export class MainNavarComponent implements OnInit {
 
   RefreshObject(){
 
-    var nFilter = document.getElementById('box-object');
+    var nFilter = document.getElementById(this.ObjectShape);
     nFilter.removeAttribute("style");
     setTimeout(() => {
       this.currentStyle = this.animation.finalDyamicStyle
@@ -92,5 +91,12 @@ export class MainNavarComponent implements OnInit {
     }, 100);
    
   }
+  SelectObject(e){
+   this.mainObject = (e.target.value).replace('#', '')
+   console.log(this.mainObject);
+   this.RefreshObject()
+  }
+
+ 
 
 }

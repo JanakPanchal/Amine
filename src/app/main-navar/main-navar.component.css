@@ -25,22 +25,94 @@
     overflow: hidden;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    
-}
-#box-object-light {
+  }
+  
+  @media (max-width:767px) {
+    #box-object {
+      width: 110px;
+      height: 110px;
+    }
+  }
+  
+  #box-object-light {
     background-color: #fff;
     width: 160px;
     height: 160px;
     overflow: hidden;
-}
-#circle-object {
-    background: #3e3e3e;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+  }
+  
+  @media (max-width:767px) {
+    #box-object-light {
+      width: 110px;
+      height: 110px;
+    }
+  }
+  
+  #box-object-gradient-hor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-}
-#box-object-2 .text {
+    top: 0;
+    left: 0;
+    background-image: -webkit-gradient(linear,right top,left top,from(#cc6aa5),color-stop(#3e91cc),to(#2dcca7));
+    background-image: linear-gradient(270deg,#cc6aa5,#3e91cc,#2dcca7);
+    background-size: 600% 100%;
+  }
+  
+  #box-object-gradient-ver {
+    background-image: -webkit-gradient(linear,left bottom,left top,from(#cc6aa5),color-stop(#3e91cc),to(#2dcca7));
+    background-image: linear-gradient(0deg,#cc6aa5,#3e91cc,#2dcca7);
+    background-size: 100% 600%;
+  }
+  
+  #box-object-flat-color,#box-object-gradient-diag,#box-object-gradient-ver {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+  
+  #box-object-gradient-diag {
+    background-image: linear-gradient(315deg,#cc6aa5,#3e91cc,#2dcca7);
+    background-size: 600% 600%;
+    background-repeat: repeat;
+  }
+  
+  #box-object-flat-color {
+    background-color: #3e3e3e;
+  }
+  
+  #box-object-backgroung-image {
+    width: 540px;
+    height: 360px;
+    overflow: hidden;
+    border: 12px solid #fff;
+    background-image: url(https://animista.net/images/venezia-bw-square-04.jpg);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  
+  @media (max-width:767px) {
+    #box-object-backgroung-image {
+      width: 76%;
+      height: 50.66666667%;
+      border-width: 6px;
+    }
+  }
+  
+  #box-object-2 {
+    background: #3e3e3e;
+    width: 240px;
+    height: 70px;
+    border-radius: 60px;
+    overflow: hidden;
+  }
+  
+  #box-object-2 .text {
     color: #fff;
     font: 16px 'TeXGyreAdventorBold';
     line-height: 70px;
@@ -49,19 +121,353 @@
     position: absolute;
     width: 100%;
     text-transform: uppercase;
-}
-#text-object {
+  }
+  
+  @media (max-width:767px) {
+    #box-object-2 {
+      width: 180px;
+      height: 45px;
+    }
+  
+    #box-object-2 .text {
+      font-size: 14px;
+      line-height: 45px;
+    }
+  }
+  
+  #circle-object {
+    background: #3e3e3e;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  @media (max-width:767px) {
+    #circle-object {
+      width: 110px;
+      height: 110px;
+    }
+  }
+  
+  .image-object {
+    border: 10px solid #fff;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  @media (max-width:767px) {
+    .image-object {
+      width: 180px;
+      height: 180px;
+      border-width: 6px;
+    }
+  }
+  
+  #image-large-object {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url(https://animista.net/images/venezia-bw.jpg) 0 0 no-repeat;
+    background-size: cover;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  #text-object {
     color: #3e3e3e;
     text-align: center;
     font: 60px/1 'TeXGyreAdventorBold';
     text-transform: none;
-}
-#letter-object {
+  }
+  
+  @media (max-width:767px) {
+    #text-object {
+      font-size: 44px;
+    }
+  }
+  
+  #letter-object {
     color: #fff;
     font: 200px/1 'TeXGyreAdventorBold';
     text-transform: none;
     text-align: center;
-}
+  }
+  
+  @media (max-width:767px) {
+    #letter-object {
+      font-size: 150px;
+    }
+  }
+  
+  #card-object-df1,#card-object-df2,#card-object-hf,#card-object-vf {
+    width: 170px;
+    height: 170px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  
+  #card-object-df1 .face,#card-object-df2 .face,#card-object-hf .face,#card-object-vf .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  #card-object-df1 .face .text,#card-object-df2 .face .text,#card-object-hf .face .text,#card-object-vf .face .text {
+    color: #fff;
+    font-family: 'TeXGyreAdventorRegular';
+    font-size: 68px;
+    line-height: 170px;
+    text-align: center;
+    display: inline;
+  }
+  
+  #card-object-df1 .front,#card-object-df2 .front,#card-object-hf .front,#card-object-vf .front {
+    background: #2dccb8;
+    z-index: 20;
+  }
+  
+  #card-object-df1 .back,#card-object-df2 .back,#card-object-hf .back,#card-object-vf .back {
+    background: #53a3dc;
+    z-index: 10;
+  }
+  
+  @media (max-width:767px) {
+    #card-object-df1,#card-object-df2,#card-object-hf,#card-object-vf {
+      width: 110px;
+      height: 110px;
+    }
+  
+    #card-object-df1 .face .text,#card-object-df2 .face .text,#card-object-hf .face .text,#card-object-vf .face .text {
+      font-size: 48px;
+      line-height: 110px;
+    }
+  }
+  
+  #card-object-hf .back {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+  
+  #card-object-vf .back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  
+  #card-object-df1 .back {
+    -webkit-transform: rotate3d(1,1,0,180deg);
+    transform: rotate3d(1,1,0,180deg);
+  }
+  
+  #card-object-df2 .back {
+    -webkit-transform: rotate3d(-1,1,0,-180deg);
+    transform: rotate3d(-1,1,0,-180deg);
+  }
+  
+  #cube-object {
+    width: 140px;
+    height: 140px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translateZ(-70px) rotateX(50deg);
+    transform: translateZ(-70px) rotateX(50deg);
+  }
+  
+  #cube-object .face {
+    display: block;
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    opacity: .7;
+  }
+  
+  #cube-object .face .text {
+    color: #fff;
+    font: 50px 'TeXGyreAdventorRegular';
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    line-height: 140px;
+  }
+  
+  #cube-object .front {
+    -webkit-transform: rotateY(0deg) translateZ(70px);
+    transform: rotateY(0deg) translateZ(70px);
+    background: red;
+  }
+  
+  #cube-object .back {
+    -webkit-transform: rotateY(180deg) translateZ(70px);
+    transform: rotateY(180deg) translateZ(70px);
+    background: green;
+  }
+  
+  #cube-object .right {
+    -webkit-transform: rotateY(90deg) translateZ(70px);
+    transform: rotateY(90deg) translateZ(70px);
+    background: #00f;
+  }
+  
+  #cube-object .left {
+    -webkit-transform: rotateY(-90deg) translateZ(70px);
+    transform: rotateY(-90deg) translateZ(70px);
+    background: #ff0;
+  }
+  
+  #cube-object .top {
+    -webkit-transform: rotateX(90deg) translateZ(70px);
+    transform: rotateX(90deg) translateZ(70px);
+    background: violet;
+  }
+  
+  #cube-object .bottom {
+    -webkit-transform: rotateX(-90deg) translateZ(70px);
+    transform: rotateX(-90deg) translateZ(70px);
+    background: orange;
+  }
+  
+  @media (max-width:767px) {
+    #cube-object {
+      -webkit-transform: translateZ(-55px) rotateX(50deg);
+      transform: translateZ(-55px) rotateX(50deg);
+    }
+  
+    #cube-object,#cube-object .face {
+      width: 110px;
+      height: 110px;
+    }
+  
+    #cube-object .face .text {
+      font-size: 40px;
+      line-height: 110px;
+    }
+  
+    #cube-object .front {
+      -webkit-transform: rotateY(0deg) translateZ(55px);
+      transform: rotateY(0deg) translateZ(55px);
+    }
+  
+    #cube-object .back {
+      -webkit-transform: rotateY(180deg) translateZ(55px);
+      transform: rotateY(180deg) translateZ(55px);
+    }
+  
+    #cube-object .right {
+      -webkit-transform: rotateY(90deg) translateZ(55px);
+      transform: rotateY(90deg) translateZ(55px);
+    }
+  
+    #cube-object .left {
+      -webkit-transform: rotateY(-90deg) translateZ(55px);
+      transform: rotateY(-90deg) translateZ(55px);
+    }
+  
+    #cube-object .top {
+      -webkit-transform: rotateX(90deg) translateZ(55px);
+      transform: rotateX(90deg) translateZ(55px);
+    }
+  
+    #cube-object .bottom {
+      -webkit-transform: rotateX(-90deg) translateZ(55px);
+      transform: rotateX(-90deg) translateZ(55px);
+    }
+  }
+  
+  #triangular-prism-object {
+    width: 200px;
+    height: 140px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  
+  #triangular-prism-object .face {
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 140px;
+    opacity: .7;
+  }
+  
+  #triangular-prism-object .face .text {
+    color: #fff;
+    font: 50px 'TeXGyreAdventorRegular';
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 140px;
+  }
+  
+  #triangular-prism-object .front {
+    -webkit-transform: rotateY(0deg) translateZ(57.735026918962596px);
+    transform: rotateY(0deg) translateZ(57.735026918962596px);
+    background: red;
+  }
+  
+  #triangular-prism-object .right {
+    -webkit-transform: rotateY(120deg) translateZ(57.735026918962596px);
+    transform: rotateY(120deg) translateZ(57.735026918962596px);
+    background: green;
+  }
+  
+  #triangular-prism-object .left {
+    -webkit-transform: rotateY(240deg) translateZ(57.735026918962596px);
+    transform: rotateY(240deg) translateZ(57.735026918962596px);
+    background: #00f;
+  }
+  
+  @media (max-width:767px) {
+    #triangular-prism-object,#triangular-prism-object .face {
+      width: 140px;
+      height: 100px;
+    }
+  
+    #triangular-prism-object .face .text {
+      font-size: 50px;
+      line-height: 100px;
+    }
+  
+    #triangular-prism-object .front {
+      -webkit-transform: rotateY(0deg) translateZ(40.41451884327382px);
+      transform: rotateY(0deg) translateZ(40.41451884327382px);
+    }
+  
+    #triangular-prism-object .right {
+      -webkit-transform: rotateY(120deg) translateZ(40.41451884327382px);
+      transform: rotateY(120deg) translateZ(40.41451884327382px);
+    }
+  
+    #triangular-prism-object .left {
+      -webkit-transform: rotateY(240deg) translateZ(40.41451884327382px);
+      transform: rotateY(240deg) translateZ(40.41451884327382px);
+    }
+  }
+  
+  #svg-text-object {
+    width: 380px;
+    margin: 0 auto;
+  }
+  
+  #svg-text-object path {
+    stroke-width: 1px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  @media (max-width:767px) {
+    #svg-text-object {
+      width: 70%;
+    }
+  }
 
 .anim-object {
     display: block;

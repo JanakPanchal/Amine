@@ -295,15 +295,19 @@ listOfSubAniamtion =  [
       },
       {
         "name": "scale-up-right",
-        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;",
+        "keyframe":"@-webkit-keyframes scale-up-right{0%{-webkit-transform:scale(.5);transform:scale(.5);-webkit-transform-origin:100% 50%;transform-origin:100% 50%}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:100% 50%;transform-origin:100% 50%}}@keyframes scale-up-right{0%{-webkit-transform:scale(.5);transform:scale(.5);-webkit-transform-origin:100% 50%;transform-origin:100% 50%}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:100% 50%;transform-origin:100% 50%}}"
       },
       {
         "name": "scale-up-br",
-        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;",
+        "keyframe":"@-webkit-keyframes scale-up-br{0%{-webkit-transform:scale(.5);transform:scale(.5);-webkit-transform-origin:100% 100%;transform-origin:100% 100%}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:100% 100%;transform-origin:100% 100%}}@keyframes scale-up-br{0%{-webkit-transform:scale(.5);transform:scale(.5);-webkit-transform-origin:100% 100%;transform-origin:100% 100%}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:100% 100%;transform-origin:100% 100%}}"
+
       },
       {
         "name": "scale-up-bottom",
-        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;"
+        "value": "cubic-bezier(0.390, 0.575, 0.565, 1.000) both ;",
+        "keyframe":"@-webkit-keyframes scale-up-bottom{0%{-webkit-transform:scale(.5);transform:scale(.5);-webkit-transform-origin:50% 100%;transform-origin:50% 100%}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 100%;transform-origin:50% 100%}}@keyframes scale-up-bottom{0%{-webkit-transform:scale(.5);transform:scale(.5);-webkit-transform-origin:50% 100%;transform-origin:50% 100%}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 100%;transform-origin:50% 100%}}"
       },
       {
         "name": "scale-up-bl",
